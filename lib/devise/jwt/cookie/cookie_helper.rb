@@ -24,8 +24,7 @@ module Devise
             value: token,
             path: '/',
             httponly: true,
-            secure: secure,
-            expires: Time.at(jwt['exp'].to_i)
+            secure: secure
           }
           res[:domain] = domain if domain.present?
           [name, res]
